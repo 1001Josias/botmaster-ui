@@ -1,19 +1,19 @@
 // @ts-check
 
-import eslint from '@eslint/js';
-import eslintTS from 'typescript-eslint';
-import tsParser from '@typescript-eslint/parser';
-import pluginImport from 'eslint-plugin-import';
-import pluginSSRFriendly from 'eslint-plugin-ssr-friendly';
-import pluginPrettier from 'eslint-plugin-prettier';
-import pluginTypescript from '@typescript-eslint/eslint-plugin';
-import pluginReactRefresh from 'eslint-plugin-react-refresh';
-import configReactRecommended from 'eslint-plugin-react/configs/recommended.js';
-import configReactJSXRuntime from 'eslint-plugin-react/configs/jsx-runtime.js';
-import pluginReactHooks from 'eslint-plugin-react-hooks';
-import {fixupPluginRules} from '@eslint/compat';
-import configPrettierRecommended from 'eslint-plugin-prettier/recommended';
-import pluginSSR from 'eslint-plugin-ssr-friendly';
+import eslint from '@eslint/js'
+import eslintTS from 'typescript-eslint'
+import tsParser from '@typescript-eslint/parser'
+import pluginImport from 'eslint-plugin-import'
+import pluginSSRFriendly from 'eslint-plugin-ssr-friendly'
+import pluginPrettier from 'eslint-plugin-prettier'
+import pluginTypescript from '@typescript-eslint/eslint-plugin'
+import pluginReactRefresh from 'eslint-plugin-react-refresh'
+import configReactRecommended from 'eslint-plugin-react/configs/recommended.js'
+import configReactJSXRuntime from 'eslint-plugin-react/configs/jsx-runtime.js'
+import pluginReactHooks from 'eslint-plugin-react-hooks'
+import { fixupPluginRules } from '@eslint/compat'
+import configPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import pluginSSR from 'eslint-plugin-ssr-friendly'
 
 export default [
     eslint.configs.recommended,
@@ -30,7 +30,7 @@ export default [
         languageOptions: {
             parser: tsParser,
             parserOptions: {
-                ecmaFeatures: {modules: true},
+                ecmaFeatures: { modules: true },
                 ecmaVersion: 'latest',
                 project: './tsconfig.linter.json',
             },
@@ -55,7 +55,7 @@ export default [
              * Allow empty arrow functions `() => {}`, while keeping other empty functions restricted
              * @see https://eslint.org/docs/latest/rules/no-empty-function#allow-arrowfunctions
              */
-            '@typescript-eslint/no-empty-function': ['error', {allow: ['arrowFunctions']}],
+            '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
             '@typescript-eslint/ban-ts-comment': 1,
             'no-const-assign': 'error',
             /** Restrict imports from devDependencies since they are not included in library build. peerDependencies are ok */
@@ -93,17 +93,18 @@ export default [
             'prettier/prettier': [
                 'error',
                 {
-                    semi: true,
+                    semi: false,
                     singleQuote: true,
-                    jsxSingleQuote: false,
+                    jsxSingleQuote: true,
+                    mjsSingleQuote: true,
                     trailingComma: 'es5',
-                    bracketSpacing: false,
+                    bracketSpacing: true,
                     jsxBracketSameLine: true,
                     arrowParens: 'avoid',
                 },
             ],
             /* Required by vite */
-            'react-refresh/only-export-components': ['warn', {allowConstantExport: true}],
+            'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
             '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
             /**
              * Allow unused variables with names stating with '_'
@@ -192,4 +193,4 @@ export default [
     {
         ignores: ['**/*.snap'],
     },
-];
+]

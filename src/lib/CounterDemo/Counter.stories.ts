@@ -1,6 +1,6 @@
-import type {Meta, StoryObj} from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react'
 
-import {Counter} from './Counter';
+import { Counter } from './Counter'
 
 const meta = {
     title: 'Example/Counter',
@@ -9,19 +9,19 @@ const meta = {
         // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
         layout: 'fullscreen',
     },
-} as Meta<typeof Counter>;
+} as Meta<typeof Counter>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const ExampleCounter: Story = {
     args: {
         initialValue: 0,
     },
-};
+}
 
 export const ExampleCounterWithInitialValue: Story = {
     args: {
         initialValue: 11,
     },
-};
+}
