@@ -62,7 +62,7 @@ export default [
             'import/no-extraneous-dependencies': [
                 'error',
                 {
-                    devDependencies: false,
+                    devDependencies: true,
                     peerDependencies: true,
                 },
             ],

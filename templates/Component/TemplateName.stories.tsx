@@ -1,6 +1,8 @@
-import type {Meta, StoryObj} from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import React from 'react'
 
-import {TemplateName} from './TemplateName';
+import { TemplateName } from './TemplateName'
 
 const meta = {
     title: 'Example/TemplateName',
@@ -9,28 +11,28 @@ const meta = {
         // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
         layout: 'fullscreen',
     },
-} as Meta<typeof TemplateName>;
+} as Meta<typeof TemplateName>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
     render: args => {
-        return <TemplateName {...args} />;
+        return <TemplateName {...args} />
     },
     args: {},
-};
+}
 
 export const WithCode: Story = {
     render: args => {
         // here comes the code
-        return <TemplateName {...args} />;
+        return <TemplateName {...args} />
     },
-};
+}
 
-WithCode.args = {};
+WithCode.args = {}
 
-WithCode.argTypes = {};
+WithCode.argTypes = {}
 
 WithCode.parameters = {
     docs: {
@@ -39,4 +41,4 @@ WithCode.parameters = {
             type: 'code',
         },
     },
-};
+}

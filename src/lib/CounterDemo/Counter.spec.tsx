@@ -1,4 +1,5 @@
 import { render, fireEvent } from '@testing-library/react'
+import { expect, it, describe, beforeEach } from 'vitest'
 
 import { Counter } from './Counter'
 
