@@ -4,6 +4,29 @@
     "stylelint-prettier/recommended"
   ],
   "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen"
+        ]
+      }
+    ],
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment"
+        ]
+      }
+    ],
     "function-calc-no-unspaced-operator": true,
     "order/order": [
       "custom-properties",
@@ -20,5 +43,7 @@
   "plugins": [
     "stylelint-order"
   ],
-  "ignoreFiles": ["**/*.snap"]
+  "ignoreFiles": [
+    "**/*.snap"
+  ]
 }
