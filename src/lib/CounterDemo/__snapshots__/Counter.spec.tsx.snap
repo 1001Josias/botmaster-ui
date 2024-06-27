@@ -1,4 +1,30 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`lib > Counter > renders without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="_counter_9b14a0"
+  >
+    <h2
+      class="_header_9b14a0"
+    >
+      Counter
+    </h2>
+    <button
+      class="_button_9b14a0"
+      type="button"
+    >
+      Increment by one
+    </button>
+    <div>
+      Total value: 
+      <strong>
+        6
+      </strong>
+    </div>
+  </div>
+</DocumentFragment>
+`;
 
 exports[`lib > Counter renders without crashing 1`] = `
 <DocumentFragment>

@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`lib > TemplateName > renders without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="_templateName_b3e14b"
+  >
+    <h2
+      class="_header_b3e14b"
+    >
+      Counter
+    </h2>
+    <button
+      class="_button_b3e14b"
+      type="button"
+    >
+      Increment by one
+    </button>
+    <div>
+      Total value: 
+      <strong>
+        6
+      </strong>
+    </div>
+  </div>
+</DocumentFragment>
+`;

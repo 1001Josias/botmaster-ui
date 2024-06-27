@@ -6,10 +6,3 @@ exports[`lib > Counter > useLogic > renders 1`] = `
   "incrementCount": [Function],
 }
 `;
-
-exports[`lib > Counter > useLogic renders 1`] = `
-{
-  "count": 0,
-  "incrementCount": [Function],
-}
-`;
