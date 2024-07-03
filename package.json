@@ -2,7 +2,7 @@
   "name": "botmaster-ui",
   "homepage": "https://morewings.github.io/botmaster-ui/",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.1.1",
   "type": "module",
   "files": [
     "dist"
