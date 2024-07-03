@@ -5,11 +5,10 @@ name: Post-merge tasks
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build-publish:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -52,7 +51,7 @@ jobs:
         run: |
           pnpm install
 
-#      - name: Publish NPM package
-#        uses: JS-DevTools/npm-publish@v3
-#        with:
-#          token: ${{ secrets.NPM_TOKEN }}
+      - name: Publish NPM package
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
