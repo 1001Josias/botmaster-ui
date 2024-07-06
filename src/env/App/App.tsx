@@ -1,7 +1,6 @@
 import type { FC } from 'react'
 
 import './index.css'
-import { Counter } from '@/lib'
 import Button from '@/lib/Button/'
 
 const App: FC = () => {
@@ -13,7 +12,6 @@ const App: FC = () => {
             <Button variant={'outline'}>Testando</Button>
             <Button variant={'ghost'}>Testando</Button>
             <Button variant={'link'}>Testando</Button>
-            <Counter />
         </div>
     )
 }
